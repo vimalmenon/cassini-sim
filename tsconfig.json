@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "esnext",
+        "target": "es6",
+        "jsx": "react",
+        "strict": true,
+        "removeComments": false,
+        "moduleResolution": "node",
+        "preserveConstEnums": true,
+        "esModuleInterop" : true,
+        "baseUrl": "./",
+        "typeRoots" : ["scripts/typings"],
+        "paths": {
+        }
+    }
+}
