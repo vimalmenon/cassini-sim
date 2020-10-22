@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    watch: true,
     mode: "development",
     devtool: "source-map",
     entry: {
@@ -79,7 +78,19 @@ module.exports = {
             
         ]
     },
-    plugins: [],
+    plugins: [
+        new MiniCssExtractPlugin({            
+            filename: '[name].css',
+            chunkFilename: '[id].css'
+        }),
+        new HtmlWebpackPlugin({
+            title: "Application Title",
+            hash: false,
+            filename : './index.html',
+            template: './index.html',
+            inject: true,
+        }),
+    ],
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".scss"],
         modules: ["scripts", "node_modules"],
