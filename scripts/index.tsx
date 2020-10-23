@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import "./styles.scss";
+
+import Page from "./page";
+
 ReactDOM.render(
-	<div>
-		this is page
-	</div>,
+	<Page />,
 	document.getElementById("main"),
 );

@@ -92,7 +92,7 @@ module.exports = {
         }),
     ],
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".scss"],
+        extensions: [".ts", ".tsx", ".js", ".scss", ".css"],
         modules: ["scripts", "node_modules"],
         alias : {
         }
