@@ -1,2 +1,7 @@
 @import '~normalize.css';
 @import "~bootstrap/scss/bootstrap";
+
+#main{
+    display:flex;
+    justify-content:center;
+}
