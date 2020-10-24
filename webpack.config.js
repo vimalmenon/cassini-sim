@@ -71,6 +71,18 @@ module.exports = {
                 ]
             },
             {
+                test: /\.(woff(2)?|ttf|eot|svg|jpe?g|png|gif|svg|jpg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/'
+                        }
+                    }
+                ]
+            },
+            {
                 enforce: "pre",
                 test: /\.ts(x?)$/,
                 loader: "source-map-loader"
@@ -95,6 +107,7 @@ module.exports = {
         extensions: [".ts", ".tsx", ".js", ".scss", ".css"],
         modules: ["scripts", "node_modules"],
         alias : {
+            "model": path.resolve(__dirname, "./scripts/model"),
         }
     }
 }
