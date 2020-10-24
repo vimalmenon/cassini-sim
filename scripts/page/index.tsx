@@ -1,8 +1,15 @@
 import React from "react";
 
+import {
+	Switch,
+	Route
+} from "react-router-dom";
+
 import styled from "styled-components";
 
-import Header from "./header";
+import Header from "./common/header";
+import PageNotFound from "./common/page-not-found";
+import Home from "./home";
 
 import {init} from "./index.service";
 
@@ -20,18 +27,19 @@ const Container = styled.div`
 		flex:1 1 100%;
 	}
 `;
+
 const Page:React.FC = () => {
 	React.useEffect(init,[]);
 	return (
 		<Container>
 			<div className="content">
 				<Header />
-				<div>
-					This is page
-				</div>
+				<Switch>
+					<Route exact path={`/`} component={Home} />
+					<Route component={PageNotFound} />
+				</Switch>
 			</div>
 		</Container>
-		
 	);
 };
 

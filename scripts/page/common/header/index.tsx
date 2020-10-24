@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 import {localization} from "model";
 
-import logo from "../../assets/images/cassini-logo.png";
-import profile from "../../assets/images/profile1.png";
+import logo from "../../../assets/images/cassini-logo.png";
+import profile from "../../../assets/images/profile1.png";
 
 const StyledHeader = styled.header`
 	display:flex;
@@ -17,7 +17,6 @@ const StyledHeader = styled.header`
 	.profile {
 		display:flex;
 		max-height:3.6rem;
-		padding:0 0.843rem;
 		flex: 0 0 auto;
 		.img{
 			padding:0 0.843rem;
@@ -30,7 +29,7 @@ const StyledHeader = styled.header`
 				font-size:12px;
 			}
 			.name{
-				font-size:14px;
+				font-size:16px;
 				font-weight:bold;
 			}
 		}
@@ -61,17 +60,16 @@ const Header:React.FC = () => {
 			<div className="profile">
 				<img className="img" src={profile} alt="profile"/>
 				<div className="text">
-					<span className="welcome">Welcome</span>
+					<span className="welcome">{localization.header.welcome}</span>
 					<span className="name">Dennis Smith</span>
 				</div>
 			</div>
 			<div className="fill">
 				<div className="brand">
 					<img className="logo" src={logo} alt="cassini"/>
-					<span className="text"> {localization.title}</span>
+					<span className="text">{localization.header.title}</span>
 				</div>
 			</div>
-			
 		</StyledHeader>
 	);
 };

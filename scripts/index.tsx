@@ -1,11 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import {
+	BrowserRouter as Router
+} from "react-router-dom";
+
 import "./styles.scss";
 
 import Page from "./page";
 
 ReactDOM.render(
-	<Page />,
+	<Router>
+		<Page />
+	</Router>,
 	document.getElementById("main"),
 );
