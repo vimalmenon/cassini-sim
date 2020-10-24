@@ -1,13 +1,22 @@
 import React from "react";
-import Container from "react-bootstrap/esm/Container";
+
+import styled from "styled-components";
 
 import Header from "./header";
 
+import {init} from "./index.service";
+
+const Container = styled.div`
+	display:flex;
+	flex-direction:column;
+`;
+
 const Page:React.FC = () => {
+	React.useEffect(init,[]);
 	return (
-		<Container fluid={"lg"}>
+		<Container>
+			<Header />
 			<div>
-				<Header />
 				This is page
 			</div>
 		</Container>
