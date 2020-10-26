@@ -108,6 +108,8 @@ module.exports = {
         modules: ["scripts", "node_modules"],
         alias : {
             "model": path.resolve(__dirname, "./scripts/model"),
+            "utility": path.resolve(__dirname, "./scripts/utility"),
+            "component": path.resolve(__dirname, "./scripts/component"),
         }
     }
 }
