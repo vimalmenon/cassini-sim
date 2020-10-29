@@ -8,6 +8,7 @@ import Col from "react-bootstrap/Col";
 
 import DocumentDetails from "./document-details";
 import DocumentStatus from "./document-status";
+import Grid from "./grid";
 
 const Home:React.FC = () => {
 	return (
@@ -29,7 +30,7 @@ const Home:React.FC = () => {
 			</Row>
 			<Row>
 				<Col lg="6">
-					Grid
+					<Grid />
 				</Col>
 			</Row>		
 		</Container>
